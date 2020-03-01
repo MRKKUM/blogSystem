@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建新的帖子</title>
+    <!--bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+#@uHeader()
+<div class="row" style="margin-right: 0px">
+    <div class="col-3" style="height: 800px;background-color: cornsilk" align="center">
+        #@UserNav()
+    </div>
+    <div class="col-9" align="center" style="margin-top: 20px;">
+        <form action="/msg/doAdd" method="post">
+            <div class="form-group">
+                <label style="width: 300px;text-align: left" >title:</label>
+                <input type="text" class="form-control" id="title" name= "title" style="width:300px">
+            </div>
+            <div class="form-group">
+                <label style="width: 300px;text-align: left" >content:</label>
+                <textarea class="form-control" name="content" rows="5" style="width: 600px"></textarea>
+            </div>
+            <button type="submit" id="btn" class="btn btn-primary">发布</button>
+        </form>
+        <label>#(msg)</label>
+    </div>
+</div>
+<script type="text/javascript">
+    function change() {
+        var title = document.getElementById("title").value.length;
+        var button = document.getElementById("btn");
+        if(title>20){
+            alert("title字数超出限制!");
+            button.disabled = true;
+        }else if (title == 0){
+            alert("title不能为空!");
+            button.disabled = true;
+        }else{
+            button.disabled = false;
+        }
+    }
+</script>
+</body>
+</html>

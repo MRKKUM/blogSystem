@@ -1,0 +1,38 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <!--bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    #@lHeader()
+    <div class="row" style="margin-right: 0px">
+        <div class="col-8">
+        #@layout()
+        </div>
+        <div class="col-4" align="center" style="margin-top: 20px">
+            <h2>欢迎登陆</h2>
+            <form action="/user/do_login" method="post">
+                <div class="form-group">
+                    <label style="width: 300px;text-align: left" >id:</label>
+                    <input type="text" class="form-control" name= "id" id="email" placeholder="Enter id" style="width:300px">
+                </div>
+                <div class="form-group">
+                    <label style="width: 300px;text-align: left" >Password:</label>
+                    <input type="text" onfocus="this.type='password'" size="20" class="form-control" name="pwd" id="pwd" placeholder="Enter password" style="width:300px">
+                </div>
+                <button type="submit" class="btn btn-primary">登陆</button>
+                <a class="btn btn-primary" href="/user/back">忘记密码</a>
+            </form>
+            <label>#(msg)</label>
+        </div>
+    </div>
+    #@footer()
+</body>
+</html>

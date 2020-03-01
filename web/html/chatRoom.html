@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>在线聊天室</title>
+    <!--bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+#@uHeader()
+<div class="row" style="margin-right: 0px">
+    <input id="name" value="#(session.user.uname)" hidden>
+    <div class="col-3" style="min-height:800px;height:auto;background-color: cornsilk" align="center">
+        #@UserNav()
+    </div>
+    <div class="col-9" style="height:auto;margin-top: 20px" >
+        <div class="text-center"><h2>欢迎来到聊天室</h2></div>
+        <hr>
+        <div class="container" style="margin: 0 auto">
+            <div id="message" class="pre-scrollable form-control" style="height: 600px"></div>
+            <textarea id="text" class="form-control" style="height: 100px"></textarea>
+            <button onclick="send()" class="btn btn-primary mt-1" style="width:100px;height: auto">发送消息</button>
+            <button onclick="closeWebSocket()" class="btn btn-primary mt-1" style="align-self: center">离开聊天室</button>
+        </div>
+        <hr>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="/js/webSocket.js"></script>
+</html>

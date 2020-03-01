@@ -1,0 +1,47 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>所有用户</title>
+    <!--bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+
+<body style="padding-left: 0px">
+#@lHeader()
+    <div class="container" style="margin-top: 20px">
+        <h2 style="text-align: center">所有用户信息</h2>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>pwd</th>
+                <th>phone</th>
+                <th>time</th>
+                <th>status</th>
+                <th>delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            #for(x:list)
+            <tr>
+                <td>#(x.id)</td>
+                <td>#(x.uname)</td>
+                <td>#(x.pwd)</td>
+                <td>#(x.phone)</td>
+                <td>#(x.u_time)</td>
+                <td>#(x.status)</td>
+                <td><a href="/user/delete/#(x.id)">删除</a></td>
+            </tr>
+            #end
+            </tbody>
+        </table>
+    </div>
+#@footer()
+</body>
+</html>

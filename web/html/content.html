@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>具体内容</title>
+    <!--bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+#@uHeader()
+<div class="row" style="margin-right: 0px;min-height:800px;">
+    <div class="col-3" style="height:auto;background-color: cornsilk" align="center">
+        #@UserNav()
+    </div>
+    <div class="col-9" style="height:auto;background-color: antiquewhite" align="center">
+        <div class="text-justify text-center" align="center">
+            <!--文章-->
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h1>#(card.title)</h1>
+                        <h6><small class="text-muted">#(card.uname)于#(card.f_time)发表</small></h6>
+                    </div>
+                    <div class="card-text">
+                        <p>#(content)</p>
+                    </div>
+                </div>
+            </div>
+            <!--评论框-->
+            <div align="center">
+                <form action="/dis/addDis/#(card.c_id)" method="post">
+                    <div class="form-group">
+                        <label style="text-align: left" >评论</label>
+                        <textarea class="form-control" name="content" rows="5" style="width: 700px"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">发布</button>
+                </form>
+            </div>
+            <!--所有评论-->
+            #for(d:dis)
+                <div  class="row mt-2" style="background-color: white ;border:1px solid #f00">
+                    <!--个人头像部分-->
+                        <div style="width: 88px;background-color: silver">
+                            <img  src="#(d.tx)" style="width: 88px;height: 88px">
+                            <div  style="height:30px;text-align: center">
+                                #(d.uname)
+                            </div>
+                        </div>
+
+                    <!--评论内容部分-->
+                        <div class="text-left ml-2" style="margin-top:10px;height:100px;width: 90%;background-color: silver">
+                            <p>#(d.d_content)</p>
+                            <p class="navbar-fixed-bottom" style="height: 30px;width: 200px;"><small class="text-muted">#(d.d_time)</small></p>
+                        </div>
+                </div>
+            #end
+        </div>
+    </div>
+</div>
+</body>
+</html>

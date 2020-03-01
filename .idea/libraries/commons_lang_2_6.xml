@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="commons-lang-2.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../OurHomework/web/WEB-INF/lib/commons-lang-2.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../OurHomework/web/WEB-INF/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../OurHomework/web/WEB-INF/lib/httpcore-4.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../OurHomework/web/WEB-INF/lib/jdom2-2.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../OurHomework/web/WEB-INF/lib/junit-3.8.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

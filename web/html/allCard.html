@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>allCard</title>
+    <!--bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+#@uHeader()
+<div class="row" style="margin-right: 0px">
+    <div class="col-3" style="height: 800px;background-color: cornsilk" align="center">
+        #@UserNav()
+    </div>
+    <div class="col-9" style="margin-top: 20px">
+        #for(card:allCard)
+        <div class="card " style="margin-top: 10px;">
+            <div class="card-body">
+                <a class="card-title" href="/msg/content/#(card.c_id)">#(card.title)</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <small class="text-muted" >发布于: #(card.f_time)</small>
+            </div>
+        </div>
+        #end
+    </div>
+</div>
+</body>
+</html>

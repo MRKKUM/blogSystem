@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="OurHomework:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/OurHomework_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="OurHomework/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="OurHomework" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jfinal-3.3-bin" />
+          <element id="library" level="project" name="fastjson-1.2.41" />
+          <element id="library" level="project" name="commons-lang-2.6" />
+          <element id="library" level="project" name="httpclient-4.2.1" />
+          <element id="library" level="project" name="sqljdbc42" />
+          <element id="library" level="project" name="druid-1.0.29" />
+          <element id="library" level="project" name="cos-2017.5" />
+          <element id="library" level="project" name="javax.websocket-api-1.0-rc4" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

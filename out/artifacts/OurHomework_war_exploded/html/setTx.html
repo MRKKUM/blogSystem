@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置头像</title>
+    <!--bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/ajaxfileupload.js"></script>
+    <script type="text/javascript" src="/js/upload.js"></script>
+</head>
+<body>
+#@uHeader()
+<div class="row" style="margin-right: 0px">
+    <div class="col-3" style="height: 800px;background-color: cornsilk" align="center">
+        #@UserNav()
+    </div>
+    <div class="col-9" style="margin-top: 20px" align="center">
+        <input type="file" name="uploadfile" id="uploadfile" onchange="preImg(this.id,'photo');" class="form-control"/>
+        <br>
+        <button id="upload" onclick="return false;" class="btn btn-block btn-primary">上传</button>
+        <br>
+        <img id="photo" src="#(imagePath)" style="width: 300px;height: 300px;display: block;" class="center-block"/>
+    </div>
+</div>
+</body>
+</html>

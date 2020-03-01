@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的帖子</title>
+    <!--bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+#@uHeader()
+<div class="row" style="margin-right: 0px">
+    <div class="col-3" style="min-height:800px;height:auto;background-color: cornsilk" align="center">
+        #@UserNav()
+    </div>
+    <div class="col-9" style="height:auto;margin-top: 20px">
+        #for(card:myCard)
+        <div class="card" style="margin-top: 10px;">
+            <div class="card-body" >
+                <h4 class="card-title">#(card.title)   <small class="text-muted">#(card.f_time)</small></h4>
+                <a href="/msg/content/#(card.c_id)" class="card-link">查看</a>
+                <a href="/msg/edit/#(card.c_id)" class="card-link">修改</a>
+                <a href="/msg/delete/#(card.c_id)" class="card-link">删除</a>
+            </div>
+        </div>
+        #end
+    </div>
+</div>
+</body>
+</html>

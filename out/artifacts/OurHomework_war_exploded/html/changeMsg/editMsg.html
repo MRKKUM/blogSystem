@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改信息</title>
+    <!--bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+#@uHeader()
+<div class="row" style="margin-right: 0px">
+    <div class="col-3" style="height: 800px;background-color: cornsilk" align="center">
+        #@UserNav()
+    </div>
+    <div class="col-9" style="margin-top: 20px">
+        <h2 style="text-align: center">信息</h2>
+        <table class="table" style="width: 600px;height:250px;text-align: center;margin: 0 auto">
+            <form action="/user/do_edit" method="post">
+            <tbody>
+            <tr>
+                <td>id</td>
+                <td><input type="text" value="#(user.id)" name="id" readonly="readonly"></td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td><input type="text" value="#(user.uname)" name="uname"></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td><input type="text" value="#(user.pwd)" name="pwd"></td>
+            </tr>
+            <tr>
+                <td>phone</td>
+                <td><input type="text" value="#(user.phone)" name="phone"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="确定" class="btn btn-primary"></td>
+            </tr>
+            </tbody>
+
+            </form>
+        </table>
+    </div>
+</div>
+</body>
+</html>
